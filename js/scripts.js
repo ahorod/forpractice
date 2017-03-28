@@ -21,4 +21,25 @@ $(document).ready(function(){
       alert(array);
     }
   });
+
+// Word Puzzle
+
+    $('#submit2').click(function() {
+
+      var sentence = $("#string").val();
+      var sentenceSplit = sentence.split("");
+      console.log(sentenceSplit);
+
+      for (i=0; i<sentenceSplit.length; i++ ){
+        if (sentenceSplit[i] === "a"||sentenceSplit[i] === "o"||sentenceSplit[i] === "e"||sentenceSplit[i] === "i"||sentenceSplit[i] === "u"){
+          console.log(sentenceSplit[i]);
+          sentenceSplit[i] = "-";
+        }
+       }
+       console.log(sentenceSplit);
+
+      var output = sentenceSplit.join("");
+      alert(output);
+
+    });
 });
